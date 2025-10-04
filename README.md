@@ -15,26 +15,38 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## Database
+## Build
+
+use fvm version 3.24.5
+
+## To build APK:
+
+fvm flutter build apk --no-tree-shake-icons
+
+## In order to build for production environment, append these to any of above command:
+
+--dart-define="KLONTONG_ENV=PRODUCTION"
+
+## Database:
+
+online CRUD backend: https://mockapi.io
+url api: https://mockapi.io/projects/68e09dd093207c4b4794e4b0
 
 category
 {
-"id": 1,
-"categoryName": "Cemilan",
+"id": "string",
+"name": "string",
 }
 
 product
 {
-"id": 86,
-"categoryId": 1,
-"categoryName": "Cemilan",
-"sku": "MHZVTK",
-"name": "Ciki ciki",
-"description": "Ciki ciki yang super enak, hanya di toko klontong kami",
-"weight": 500,
-"width": 5,
-"length": 5,
-"height": 5,
-"image": "https://cf.shopee.co.id/file/7cb930d1bd183a435f4fb3e5cc4a896b",
-"harga": 30000
+"id": "string",
+"categoryId": "relation of category",
+"sku": "string",
+"name": "string",
+"description": "string",
+"weight": "number",
+"image": "string",
+"price": "number",
+"category": "parent resource"
 }
